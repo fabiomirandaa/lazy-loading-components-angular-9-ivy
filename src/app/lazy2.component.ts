@@ -3,8 +3,7 @@ import {
   ViewContainerRef,
   ComponentFactoryResolver,
   OnInit,
-  OnDestroy,
-  // ViewChild
+  OnDestroy
 } from '@angular/core';
 import { Lazy2aComponent } from './lazy2a.component';
 import { Lazy2bComponent } from './lazy2b.component';
@@ -12,11 +11,10 @@ import { Lazy2bComponent } from './lazy2b.component';
 @Component({
   template: `
     <p>lazy2 component</p>
-    <!-- template #childContainer></template -->
   `,
 })
 export class Lazy2Component implements OnInit, OnDestroy {
-  // @ViewChild("childContainer", { read: ViewContainerRef }) container;
+  teste = 'Isso é muito legal';
 
   constructor(
     private viewContainerRef: ViewContainerRef,
