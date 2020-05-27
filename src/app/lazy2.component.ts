@@ -3,6 +3,7 @@ import {
   ViewContainerRef,
   ComponentFactoryResolver,
   OnInit,
+  OnDestroy,
   // ViewChild
 } from '@angular/core';
 import { Lazy2aComponent } from './lazy2a.component';
@@ -14,7 +15,7 @@ import { Lazy2bComponent } from './lazy2b.component';
     <!-- template #childContainer></template -->
   `,
 })
-export class Lazy2Component implements OnInit {
+export class Lazy2Component implements OnInit, OnDestroy {
   // @ViewChild("childContainer", { read: ViewContainerRef }) container;
 
   constructor(
@@ -28,5 +29,9 @@ export class Lazy2Component implements OnInit {
     this.viewContainerRef.clear();
     this.viewContainerRef.createComponent(componentFactorya);
     this.viewContainerRef.createComponent(componentFactoryb);
+  }
+
+  ngOnDestroy() {
+    console.log('destruiu component 2');
   }
 }

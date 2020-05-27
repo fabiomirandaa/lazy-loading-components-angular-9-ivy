@@ -10,8 +10,8 @@ import {
     <div style="display: flex; align-items: center; justify-content: center;">
       <div>
         <div>Hello World! This is the {{ title }} app.</div>
-        <button (click)="getLazy1()">lazy 1</button>
-        <button (click)="getLazy2()">lazy 2</button>
+        <button style="margin: 20px;" (click)="getLazy1()">lazy 1</button>
+        <button style="margin: 20px;" (click)="getLazy2()">lazy 2</button>
       </div>
     </div>
   `,
